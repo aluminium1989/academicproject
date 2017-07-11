@@ -1,0 +1,9 @@
+UserBundle\Entity\User:
+    properties:
+        email:
+            - Email: ~
+            - NotBlank: ~
+        username:
+            - NotBlank: ~
+        fullName:
+            - NotBlank: ~
