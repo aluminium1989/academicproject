@@ -38,7 +38,13 @@ class UserType extends AbstractType
             ->add('username')
             ->add('fullName')
             ->add('password')
-            ->add('roles', ChoiceType::class, array('choices'  => $this->roles));
+            ->add('roles', ChoiceType::class, array('choices'  => $this->roles))
+            ->add('projects', 'Symfony\Bridge\Doctrine\Form\Type\EntityType', array(
+                'class'    => 'ProjectBundle\Entity\Project',
+                'choice_label' => 'label',
+                'expanded' => true,
+                'multiple' => true
+            )) ;
     }
     
     /**

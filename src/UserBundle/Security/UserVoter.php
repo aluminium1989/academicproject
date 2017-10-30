@@ -50,9 +50,9 @@ class UserVoter extends Voter
             case self::EDIT:
                 return $this->canEdit($updatedUser, $token);
             case self::NUOVO:
-                return self::ACCESS_DENIED;
+                return false;
             case self::DELETE:
-                return self::ACCESS_DENIED;
+                return false;
         }
 
         throw new \LogicException('This code should not be reached!');
